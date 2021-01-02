@@ -1,0 +1,6 @@
+framework module Pods_Void {
+  umbrella header "Pods-Void-umbrella.h"
+
+  export *
+  module * { export * }
+}
