@@ -1,4 +1,4 @@
-# NewYearNewMeh
+# The Void
 Looking for somewhere to scream into the void but finding your pillow suffocating? Look no further!
 
 ## Table of contents
