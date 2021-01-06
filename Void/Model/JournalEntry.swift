@@ -21,6 +21,7 @@ struct JournalEntry {
             "entry": entry,
             "entryDate": entryDate,
             "title": title,
+            "userId": userId
         ]
     }
 }

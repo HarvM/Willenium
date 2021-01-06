@@ -14,7 +14,7 @@ class JournalTableViewCell: UITableViewCell {
     var journal: JournalEntry? {
         didSet {
             if let journal = journal {
-//                self.journalDate.text = journal.entryDate.toString(dateFormat: "dd MMM, YY")
+                self.journalDate.text = journal.entryDate.toString(dateFormat: "dd MMM, YY")
                 self.journalTitle.text = journal.title
                 self.journalDetail.text = journal.entry
             }
@@ -22,7 +22,7 @@ class JournalTableViewCell: UITableViewCell {
     }
     
     ///Outlets that define the appearance of the cell
-//    @IBOutlet weak var journalDate: UILabel!
+    @IBOutlet weak var journalDate: UILabel!
     @IBOutlet weak var journalTitle: UILabel!
     @IBOutlet weak var journalDetail: UILabel!
 

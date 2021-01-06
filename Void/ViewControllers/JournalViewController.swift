@@ -14,19 +14,55 @@ class JournalViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var journalEntries: [JournalEntry] = []
-    var dataBase: Firestore!
+    var database: Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        database = Firestore.firestore()
         tableView.delegate = self
         tableView.dataSource = self
-        ///Call of the function to populate the TablelView
-        self.dummyData()
+        getJournals()
     }
     
-    //MARK: Define and create a reference to the database
-//    var ref: DatabaseReference!
-//    ref = Database.database().reference()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        testWrite()
+    }
+    
+    func testWrite() {
+        guard let userId = Auth.auth().currentUser?.uid else {return}
+        let entry = JournalEntry.init(entry: "Test Entry", entryDate: Date(), title: "Test title", userId: userId)
+        var reference: DocumentReference? = nil
+        reference = self.database.collection("Journal").addDocument(data: entry.dictionary, completion: { error in
+            guard error == nil else {return}
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        })
+    }
+    
+    func getJournals() {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        database.collection("Journal").addSnapshotListener { (snapshot, error) in
+            guard let documents = snapshot?.documents else {
+                print("Couldn't find the documents")
+                return
+            }
+            
+            self.journalEntries = documents.compactMap({ document in
+                return JournalEntry(dictionary: document.data())
+            })
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     
     func dummyData() {
         let data = JournalEntry.init(entry: "New", entryDate: Date(), title: "Test", userId: "Test1")

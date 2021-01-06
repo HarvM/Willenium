@@ -158,6 +158,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="journalDate" destination="IWg-br-uIO" id="o8U-fz-SVZ"/>
                                             <outlet property="journalDetail" destination="TEf-cP-ALy" id="Pek-ZO-ocH"/>
                                             <outlet property="journalTitle" destination="YGE-Hp-Rqn" id="UtH-Mt-2zj"/>
                                         </connections>
