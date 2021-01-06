@@ -17,6 +17,10 @@
 		49AED1F4259E1C12008268C4 /* VoidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AED1F3259E1C12008268C4 /* VoidTests.swift */; };
 		49AED1FF259E1C12008268C4 /* VoidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AED1FE259E1C12008268C4 /* VoidUITests.swift */; };
 		49AED210259E1E69008268C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49AED20F259E1E69008268C4 /* GoogleService-Info.plist */; };
+		49C9AF0B25A10C650098E240 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9AF0A25A10C650098E240 /* JournalViewController.swift */; };
+		49C9AF2B25A147520098E240 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9AF2A25A147520098E240 /* JournalEntry.swift */; };
+		49C9AF3125A206CA0098E240 /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9AF3025A206CA0098E240 /* JournalTableViewCell.swift */; };
+		49C9AF3925A209C10098E240 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9AF3825A209C10098E240 /* Date.swift */; };
 		745568EBE22271B44ECC7528 /* Pods_VoidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50C57C8F3BE656D1F077664 /* Pods_VoidTests.framework */; };
 		ECB79961D66B901B0BF041E3 /* Pods_Void_VoidUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9206B43B1DF0AF804C7C6E /* Pods_Void_VoidUITests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +59,10 @@
 		49AED1FE259E1C12008268C4 /* VoidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidUITests.swift; sourceTree = "<group>"; };
 		49AED200259E1C12008268C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49AED20F259E1E69008268C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		49C9AF0A25A10C650098E240 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		49C9AF2A25A147520098E240 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		49C9AF3025A206CA0098E240 /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
+		49C9AF3825A209C10098E240 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		543B10D76AA49E666B8C9B36 /* Pods-VoidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoidTests.debug.xcconfig"; path = "Target Support Files/Pods-VoidTests/Pods-VoidTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81E1199D08D02F9E6B9923D0 /* Pods_Void.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Void.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4196AC2F0D2074BFC129D6 /* Pods-Void-VoidUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Void-VoidUITests.release.xcconfig"; path = "Target Support Files/Pods-Void-VoidUITests/Pods-Void-VoidUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,8 +111,16 @@
 				543B10D76AA49E666B8C9B36 /* Pods-VoidTests.debug.xcconfig */,
 				0FBD02619D5C5CC5DB2F4267 /* Pods-VoidTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4931607C25A10BC20086C0F0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				49C9AF0A25A10C650098E240 /* JournalViewController.swift */,
+				49AED1E0259E1C0E008268C4 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		49AED1D0259E1C0E008268C4 = {
@@ -132,9 +148,12 @@
 		49AED1DB259E1C0E008268C4 /* Void */ = {
 			isa = PBXGroup;
 			children = (
+				49C9AF3D25A20CA30098E240 /* Helpers */,
+				49C9AF3E25A20CAC0098E240 /* Cell */,
+				49C9AF2F25A205070098E240 /* Model */,
+				4931607C25A10BC20086C0F0 /* ViewControllers */,
 				49AED1DC259E1C0E008268C4 /* AppDelegate.swift */,
 				49AED1DE259E1C0E008268C4 /* SceneDelegate.swift */,
-				49AED1E0259E1C0E008268C4 /* ViewController.swift */,
 				49AED1E2259E1C0E008268C4 /* Main.storyboard */,
 				49AED1E5259E1C11008268C4 /* Assets.xcassets */,
 				49AED1E7259E1C11008268C4 /* LaunchScreen.storyboard */,
@@ -160,6 +179,30 @@
 				49AED200259E1C12008268C4 /* Info.plist */,
 			);
 			path = VoidUITests;
+			sourceTree = "<group>";
+		};
+		49C9AF2F25A205070098E240 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49C9AF2A25A147520098E240 /* JournalEntry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		49C9AF3D25A20CA30098E240 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				49C9AF3825A209C10098E240 /* Date.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		49C9AF3E25A20CAC0098E240 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				49C9AF3025A206CA0098E240 /* JournalTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C65502CE3EF3600D93CBE49A /* Frameworks */ = {
@@ -448,7 +491,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				49AED1E1259E1C0E008268C4 /* ViewController.swift in Sources */,
+				49C9AF3125A206CA0098E240 /* JournalTableViewCell.swift in Sources */,
+				49C9AF3925A209C10098E240 /* Date.swift in Sources */,
 				49AED1DD259E1C0E008268C4 /* AppDelegate.swift in Sources */,
+				49C9AF2B25A147520098E240 /* JournalEntry.swift in Sources */,
+				49C9AF0B25A10C650098E240 /* JournalViewController.swift in Sources */,
 				49AED1DF259E1C0E008268C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

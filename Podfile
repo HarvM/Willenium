@@ -10,8 +10,7 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'FirebaseUI/Email'
-pod 'Firebase/Database'
-
+pod 'Firebase/Firestore'
 
   target 'VoidTests' do
     inherit! :search_paths
