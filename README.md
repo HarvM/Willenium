@@ -24,5 +24,4 @@ Diaries seem a little dated now and a bit too easy to be accessed so this seems 
 I've also been meaning to get into writing down my own thoughts, etc. for my own benefit.
 
 ## Contact
-Created by [Marc Harvey](www.linkedin.com/in/marc-harvey-lru) - feel free to contact me!
-
+Created by [Marc Harvey](https://www.linkedin.com/in/marc-harvey-lru/) - feel free to contact me!
